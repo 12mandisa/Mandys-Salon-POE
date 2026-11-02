@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Mandy's Saloon Parktown Johannesburg</title>
+<meta name="description" content="Mandy's Saloon Gallery Parktown - slideshow of knotless braids, fulani, straight back, cluster lashes & nail sets at 10 Park Ln, Parktown.">
+<link rel="stylesheet" href="CSS/style.css">
+
+<style>
+.slideshow-container{max-width:700px; position:relative; margin:20px auto; border-radius:15px; overflow:hidden;}
+.mySlides{display:none;}
+.mySlides img{width:100%; height:350px; object-fit:cover;}
+.prev,.next{cursor:pointer; position:absolute; top:50%; width:auto; padding:16px; color:white; font-weight:bold; font-size:18px; background:rgba(0,0,0,0.5); border-radius:0 5px 5px 0; user-select:none;}
+.next{right:0; border-radius:5px 0 0 5px;}
+.dot{cursor:pointer; height:12px; width:12px; margin:0 2px; background:#bbb; border-radius:50%; display:inline-block;}
+.active,.dot:hover{background:#d63384;}
+.gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; padding:15px;}
+.gallery-grid img{width:100%; height:220px; object-fit:cover; border-radius:10px; cursor:pointer; transition:0.3s;}
+.gallery-grid img:hover{transform:scale(1.05);}
+#lightbox{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:1000;}
+#lightbox img{max-width:90%; max-height:90%; border-radius:10px;}
+</style>
+</head>
+<body style="background-color: beige;">
+<header>
+<img src="Images/Logo.png" style="width:70px;height:85px;" alt="Mandy's Saloon Logo">
+<nav>
+<nav>
+<a href="Home.html">Home</a>
+<a href="About-us.html">| About Us</a>
+<a href="Services.html">| Services</a>
+<a href="Gallery.html">| Gallery</a>
+<a href="Monthly-special.html">| Specials</a>
+<a href="Book-appointment.html">| Book Appointment</a>
+<a href="Contact.html">| Contact</a>
+</nav>
+</header>
+
+<main>
+<h1>Our Work Gallery</h1>
+<p>Real Clients, Real Results - Tap Any Photo To Enlarge</p>
+
+<div class="slideshow-container">
+<div class="mySlides"><img src="Images/knotless-braids.jpg" alt="Knotless Braids "></div>
+<div class="mySlides"><img src="Images/fulani.jpg" alt="Fulani Braids "></div>
+<div class="mySlides"><img src="Images/straight back.jpg" alt="Straight Back "></div>
+<div class="mySlides"><img src="Images/nail-set.jpg" alt="Nail Set "></div>
+<div class="mySlides"><img src="Images/cluster lashes.jpg" alt="Cluster Lashes "></div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<div style="text-align:center; margin-bottom:20px;">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<h2>Click any image to enlarge</h2>
+<div class="gallery-grid">
+<img src="Images/cluster lashes.jpg" alt="Cluster Lashes" onclick="openLightbox(this.src)">
+<img src="Images/fulani.jpg" alt="Fulani" onclick="openLightbox(this.src)">
+<img src="Images/haircut.jpg" alt="Haircut" onclick="openLightbox(this.src)">
+<img src="Images/knotless-braids.jpg" alt="Knotless Braids" onclick="openLightbox(this.src)">
+<img src="Images/nail-set.jpg" alt="Nail Set" onclick="openLightbox(this.src)">
+<img src="Images/small saloon.jpg" alt="Saloon" onclick="openLightbox(this.src)">
+<img src="Images/straight back.jpg" alt="Straight Back" onclick="openLightbox(this.src)">
+<img src="Images/straigth up.jpg" alt="Straight Up" onclick="openLightbox(this.src)">
+</div>
+
+<div id="lightbox" onclick="closeLightbox()"><img id="lightboxImg" src=""></div>
+</main>
+
+<footer>
+<p>&copy; 2026 Mandy's Saloon - ST20527098. All rights reserved.</p>
+
+<p id="datetime"></p>
+</footer>
+
+<script>
+    function updateDateTime(){
+        const now = new Date();
+        const options = {weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit'};
+        document.getElementById('datetime').textContent = now.toLocaleDateString('en-ZA', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n){showSlides(slideIndex += n);}
+    function currentSlide(n){showSlides(slideIndex = n);}
+    function showSlides(n){
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if(n > slides.length){slideIndex = 1}
+        if(n < 1){slideIndex = slides.length}
+        for(i=0; i<slides.length; i++){slides[i].style.display="none";}
+        for(i=0; i<dots.length; i++){dots[i].className = dots[i].className.replace(" active","");}
+        slides[slideIndex-1].style.display="block";
+        dots[slideIndex-1].className += " active";
+    }
+    setInterval(()=>{plusSlides(1)}, 4000);
+
+    function openLightbox(src){
+        document.getElementById('lightbox').style.display='flex';
+        document.getElementById('lightboxImg').src=src;
+    }
+    function closeLightbox(){
+        document.getElementById('lightbox').style.display='none';
+    }
+</script>
+<script src="JS/script.js"></script>
+</body>
+</html>

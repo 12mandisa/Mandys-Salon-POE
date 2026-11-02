@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services & Prices - Mandy's Saloon Parktown Johannesburg</title>
+<meta name="description" content="Mandy's Saloon Parktown services - knotless braids R350, fulani R400, straight back R250, nails R150, cluster lashes R180. At 10 Park Ln, Parktown, Johannesburg.">
+<meta name="keywords" content="Mandy's Saloon services , knotless braids , price, fulani braids, nails ">
+<link rel="stylesheet" href="CSS/style.css">
+
+<style>
+.service-card{border:1px solid #ddd; border-radius:15px; padding:15px; margin:15px; background:white; text-align:center;}
+.service-card img{width:100%; height:180px; object-fit:cover; border-radius:10px;}
+.price{color:#d63384; font-weight:bold; font-size:18px;}
+</style>
+</head>
+<body style="background-color: beige;">
+<header>
+<img src="Images/Logo.png" style="width:70px;height:85px;" alt="Mandy's Saloon Logo">
+<nav>
+<nav>
+<a href="Home.html">Home</a>
+<a href="About-us.html">| About Us</a>
+<a href="Services.html">| Services</a>
+<a href="Gallery.html">| Gallery</a>
+<a href="Monthly-special.html">| Specials</a>
+<a href="Book-appointment.html">| Book Appointment</a>
+<a href="Contact.html">| Contact</a>
+</nav>
+</header>
+
+<main>
+<h1>Our Services & Prices</h1>
+<p>Affordable beauty & long lasting - All styles under R500</p>
+
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:10px; padding:10px;">
+
+<div class="service-card">
+<img src="Images/knotless-braids.jpg" alt="Knotless Braids ">
+<h3>Knotless Braids</h3>
+<p>Neat, lightweight & long lasting protective style</p>
+<p class="price">From R350</p>
+</div>
+
+<div class="service-card">
+<img src="Images/fulani.jpg" alt="Fulani Braids ">
+<h3>Fulani Braids</h3>
+<p>Trendy braids with beads & unique patterns</p>
+<p class="price">From R400</p>
+</div>
+
+<div class="service-card">
+<img src="Images/straight back.jpg" alt="Straight Back ">
+<h3>Straight Back</h3>
+<p>Classic straight back cornrows</p>
+<p class="price">From R250</p>
+</div>
+
+<div class="service-card">
+<img src="Images/straigth up.jpg" alt="Straight Up">
+<h3>Straight Up / Straight Up Braids</h3>
+<p>Stylish straight up pattern</p>
+<p class="price">From R300</p>
+</div>
+
+<div class="service-card">
+<img src="Images/nail-set.jpg" alt="Nail Set ">
+<h3>Nail Set - Acrylic & Gel</h3>
+<p>Beautiful nail art & extensions</p>
+<p class="price">From R150</p>
+</div>
+
+<div class="service-card">
+<img src="Images/cluster lashes.jpg" alt="Cluster Lashes ">
+<h3>Cluster Lashes</h3>
+<p>Full, natural looking lashes</p>
+<p class="price">From R180</p>
+</div>
+
+<div class="service-card">
+<img src="Images/haircut.jpg" alt="Haircut ">
+<h3>Haircut & Styling</h3>
+<p>Professional cuts & styling for all hair types</p>
+<p class="price">From R100</p>
+</div>
+
+</div>
+
+<p style="text-align:center; margin-top:20px;"><strong>Find us:</strong> 10 Park Ln, Parktown, Johannesburg - Near Rosebank Mall</p>
+</main>
+
+<footer>
+<p>&copy; 2026 Mandy's Saloon - ST10527098. All rights reserved.</p>
+
+<p id="datetime"></p>
+</footer>
+
+<script>
+    function updateDateTime(){
+        const now = new Date();
+        const options = {weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit'};
+        document.getElementById('datetime').textContent = now.toLocaleDateString('en-ZA', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+<script src="JS/script.js"></script>
+</body>
+</html>

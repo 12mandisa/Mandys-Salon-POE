@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Mandy's Saloon Parktown Johannesburg</title>
+<meta name="description" content="About Mandy's Saloon - Professional hair & beauty salon at 10 Park Ln, Parktown, Johannesburg. Specializing in knotless braids, fulani, nails & lashes since 2018.">
+<meta name="keywords" content="Mandy's Saloon Parktown, about Mandy's Saloon, salon Parktown Johannesburg">
+<link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body style="background-color: beige;">
+<header>
+<img src="Images/Logo.png" style="width:70px;height:85px;" alt="Mandy's Saloon Logo">
+<nav>
+<nav>
+<a href="Home.html">Home</a>
+<a href="About-us.html">| About Us</a>
+<a href="Services.html">| Services</a>
+<a href="Gallery.html">| Gallery</a>
+<a href="Monthly-special.html">| Specials</a>
+<a href="Book-appointment.html">| Book Appointment</a>
+<a href="Contact.html">| Contact</a>
+</nav>
+</header>
+
+<main>
+<h1>About Mandy's Saloon</h1>
+<h2>Your Beauty, Our Passion</h2>
+
+<img src="Images/small saloon.jpg" style="width:100%; max-width:500px; border-radius:15px; margin:15px auto; display:block;" alt="Inside Mandy's Saloon Parktown">
+
+<p>Mandy's Saloon is a premium yet affordable hair and beauty salon located at <strong>10 Park Ln, Parktown, Johannesburg</strong>. Since 2018, we have been making women in Parktown, Rosebank, Braamfontein and Johannesburg CBD feel confident and beautiful.</p>
+<br>
+<p>We specialize in protective hairstyles including <strong>knotless braids, fulani braids, straight back and straight up</strong>, as well as professional <strong>nail sets and cluster lashes</strong>. Our salon is known for neat work, affordable prices and friendly service.</p>
+<br>
+<h3>Why Choose Us in Parktown?</h3>
+<ul>
+<li>✅ Located at 10 Park Ln, Parktown - Easy access from Rosebank, Braamfontein, Hillbrow & CBD</li>
+<li>✅ Affordable prices - Braids from R250</li>
+<li>✅ Clean, safe and professional salon</li>
+<li>✅ Experienced stylists - 7+ years experience</li>
+<li> Walk-ins welcome, appointments preferred</li>
+</ul>
+<br>
+<p><strong>Location:</strong> 10 Park Ln, Parktown, Johannesburg - Near Rosebank Mall, close to Wits University</p>
+</main>
+<br>
+<footer>
+<p>&copy; 2026 Mandy's Saloon - ST10527098. All rights reserved.</p>
+
+<p id="datetime"></p>
+</footer>
+
+<script>
+    function updateDateTime(){
+        const now = new Date();
+        const options = {weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit'};
+        document.getElementById('datetime').textContent = now.toLocaleDateString('en-ZA', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+<script src="JS/script.js"></script>
+</body>
+</html>

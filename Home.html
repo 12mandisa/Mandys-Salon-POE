@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mandy's Saloon | Best Hair & Beauty Salon Parktown Johannesburg</title>
+<meta name="description" content="Mandy's Saloon Parktown Johannesburg - knotless braids, fulani, straight back, nails, cluster lashes. Located at 10 Park Ln, Parktown, near Rosebank.">
+<meta name="keywords" content="Mandy's Saloon, hair salon Parktown, braids Parktown Johannesburg">
+<link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body style="background-color: beige;">
+<header>
+<img src="Images/Logo.png" style="width:70px;height:85px;" alt="Mandy's Saloon Logo">
+<nav>
+<nav>
+<a href="Home.html">Home</a>
+<a href="About-us.html">| About Us</a>
+<a href="Services.html">| Services</a>
+<a href="Gallery.html">| Gallery</a>
+<a href="Monthly-special.html">| Specials</a>
+<a href="Book-appointment.html">| Book Appointment</a>
+<a href="Contact.html">| Contact</a>
+</nav>
+</header>
+
+<main>
+<h1>Welcome to Mandy's Saloon</h1>
+<h2>Where Beauty Meets Confidence</h2>
+<p>Affordable braids, nails & lashes in the heart of Parktown</p>
+<img src="Images/small saloon.jpg" style="width:100%; max-width:650px; border-radius:15px; margin:20px auto; display:block;" alt="Mandy's Saloon - 10 Park Ln Parktown Johannesburg">
+
+<p style="text-align:center;"><strong>Location:</strong> 10 Park Ln, Parktown, Johannesburg - near Rosebank Mall</p>
+<p style="text-align:center;">Open Mon-Sat 08:00 - 18:00 | Sunday by appointment</p>
+<a href="Book-appointment.html" style="display:block; width:200px; margin:20px auto; padding:10px; background:#d63384; color:white; text-align:center; border-radius:10px; text-decoration:none;">Book Now</a>
+
+<h3 style="text-align:center; margin-top:30px;">Find Us - 10 Park Ln, Parktown</h3>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3580428873057!2d28.0447677!3d-26.1827235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9571a5dcfbe7a1%3A0x6b0b5a1b5a1b5a1!2s10%20Park%20Ln%2C%20Parktown%2C%20Johannesburg!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" width="100%" height="350" style="border:0; border-radius:15px; max-width:800px; margin:0 auto; display:block;" allowfullscreen="" loading="lazy"></iframe>
+<p style="text-align:center;"><a href="https://maps.google.com/?q=10+Park+Ln,+Parktown,+Johannesburg" target="_blank" style="color:#d63384;">Open in Google Maps</a></p>
+
+</main>
+
+<footer>
+<p>&copy; 2026 Mandy's Saloon - ST20527098. All rights reserved.</p>
+
+<p id="datetime"></p>
+</footer>
+
+<script>
+    function updateDateTime(){
+        const now = new Date();
+        const options = {weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit'};
+        document.getElementById('datetime').textContent = now.toLocaleDateString('en-ZA', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+<script src="JS/script.js"></script>
+</body>
+</html>
